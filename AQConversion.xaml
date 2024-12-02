@@ -6,53 +6,53 @@
     <Grid Padding="20" RowSpacing="15" ColumnSpacing="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <!-- Entrada de velocidad -->
+         
             <RowDefinition Height="Auto" />
-            <!-- Unidad inicial -->
+          
             <RowDefinition Height="Auto" />
-            <!-- Unidad final -->
+           
             <RowDefinition Height="Auto" />
-            <!-- Botones -->
+           
             <RowDefinition Height="Auto" />
-            <!-- Resultado -->
+           
         </Grid.RowDefinitions>
 
-        <!-- Entrada de velocidad -->
+       
         <Entry x:Name="SpeedEntry"
                Placeholder="AQ Ingresa velocidad"
                Keyboard="Numeric"
                Grid.Row="0"
                Margin="0,10,0,0" />
 
-        <!-- Selector de unidad inicial -->
+      
         <Picker x:Name="FromPicker"
                 Title="AQ Unidad de Origen (De)"
                 Grid.Row="1"
                 Margin="0,10,0,0" />
 
-        <!-- Selector de unidad final -->
+       
         <Picker x:Name="ToPicker"
                 Title="AQ Unidad de Destino (A)"
                 Grid.Row="2"
                 Margin="0,10,0,0" />
 
-        <!-- Contenedor para los botones -->
+      
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Grid.Row="3">
-            <!-- Botón de conversión -->
+         
             <Button Text="AQ Convertir"
-                    Clicked="OnConvertClicked"
+                    Clicked="AQOnConvertClicked"
                     BackgroundColor="#6A5ACD"
                     TextColor="White"
                     WidthRequest="120" />
-            <!-- Botón de limpiar -->
+           
             <Button Text="AQ Limpiar"
-                    Clicked="Limpiar"
+                    Clicked="AQLimpiar"
                     BackgroundColor="#FF6347"
                     TextColor="White"
                     WidthRequest="120" />
         </StackLayout>
 
-        <!-- Resultado -->
+        
         <Label x:Name="ResultLabel"
                Text="AQ Resultado aparecerá aquí"
                FontSize="16"
