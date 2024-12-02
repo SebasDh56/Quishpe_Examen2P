@@ -2,19 +2,49 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AQAppExamen.AQConversion"
-             Title="AQConversion">
-    <VerticalStackLayout Spacing="10" Margin="5">
-        <Editor x:Name="TextEditor"
-                Placeholder="Enter your note"
-                HeightRequest="100" />
+             Title="Convertidor de Velocidad">
+    <AbsoluteLayout>
 
-        <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
-            <Button Text="Convertir"
-                    Clicked="AQconvertir_Clicked" />
+        <!-- Entrada de velocidad -->
+        <Entry x:Name="SpeedEntry"
+               Placeholder="Ingresa velocidad"
+               Keyboard="Numeric"
+               AbsoluteLayout.LayoutBounds="0.5, 0.1, 0.8, 40"
+               AbsoluteLayout.LayoutFlags="WidthProportional"
+               />
 
-            <Button Grid.Column="1"
-                    Text="limpiar"
-                    Clicked="AQlimpiar_Clicked" />
-        </Grid>
-    </VerticalStackLayout>
+        <!-- Selector de unidad inicial -->
+        <Picker x:Name="FromPicker"
+                Title="De"
+                AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.8, 40"
+                AbsoluteLayout.LayoutFlags="WidthProportional"
+                />
+
+        <!-- Selector de unidad final -->
+        <Picker x:Name="ToPicker"
+                Title="A"
+                AbsoluteLayout.LayoutBounds="0.5, 0.35, 0.8, 40"
+                AbsoluteLayout.LayoutFlags="WidthProportional"
+                />
+
+        <!-- Botón de conversión -->
+        <Button Text="Convertir"
+                Clicked="OnConvertClicked"
+                BackgroundColor="#6A5ACD"
+                TextColor="White"
+                AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.8, 40"
+                AbsoluteLayout.LayoutFlags="WidthProportional"
+                />
+
+        <!-- Resultado -->
+        <Label x:Name="ResultLabel"
+               Text="Resultado aparecerá aquí"
+               FontSize="16"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               AbsoluteLayout.LayoutBounds="0.5, 0.65, 0.8, 40"
+               AbsoluteLayout.LayoutFlags="WidthProportional"
+               />
+
+    </AbsoluteLayout>
 </ContentPage>

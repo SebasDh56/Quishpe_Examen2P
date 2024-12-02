@@ -1,4 +1,4 @@
-﻿namespace AQAppExamen
+﻿/*namespace AQAppExamen
 {
     public partial class MainPage : ContentPage
     {
@@ -23,3 +23,4 @@
     }
 
 }
+*/
