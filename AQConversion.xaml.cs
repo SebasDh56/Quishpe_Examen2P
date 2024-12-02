@@ -33,6 +33,21 @@ public partial class AQConversion : ContentPage
         ResultLabel.Text = $"{speed} {fromUnit} = {result:0.##} {toUnit}";
     }
 
+    private void Limpiar(object sender, EventArgs e)
+    {
+        SpeedEntry.Text = string.Empty;
+
+        // Restablecer los pickers
+        FromPicker.SelectedIndex = -1;
+        ToPicker.SelectedIndex = -1;
+
+        // Limpiar el resultado
+        ResultLabel.Text = "Resultado aparecerá aquí";
+
+    }
+
+
+
     private double ConvertSpeed(double value, string fromUnit, string toUnit)
     {
         // Convertir a base (metros/segundo)
